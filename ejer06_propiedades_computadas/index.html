@@ -14,8 +14,9 @@
         <h2>{{mensaje}}</h2>
         <ul>
             <!-- <li v-if="tarea.prioridad" v-for="tarea in tareas"> -->
-        <li  v-for="tarea in tareasConPrioridad">                
-                {{tarea}}
+            <li  v-for="tarea in tareasConPrioridad">                
+            <!-- <li v-for="tarea in tareasPorAntiguedad"> -->
+                {{tarea.titulo}}
             </li>
         </ul>
 

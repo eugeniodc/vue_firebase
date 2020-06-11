@@ -2,7 +2,7 @@ new Vue({
     el: 'main',
     data: {
         mensaje: 'Hola Mundo :) !',
-        nuevatarea: null,
+        nuevaTarea: null,
         tareas: [{
             titulo: 'Aprender Vue.js',
             prioridad: true,
@@ -37,6 +37,9 @@ new Vue({
             //     return tarea.prioridad;
             // });
             return this.tareas.filter((tarea) => tarea.prioridad);
+        },
+        tareasPorAntiguedad() {
+            return this.tareas.sort((a, b) => b.antiguedad - a.antiguedad);
         }
     }
 })
