@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+</head>
+
+<body>
+    <main>
+        <input type="search" v-model="busqueda" placeholder="Buscar juego">
+        <ul>
+            <!-- <li v-for="juego in mejoresJuegos"> -->
+            <li v-for="juego in buscarJuegos">
+                {{ juego.titulo}}
+            </li>
+        </ul>
+
+        <input type="range" min="0" max="10" v-model="minimo">
+        <pre>{{$data}}</pre>
+    </main>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
